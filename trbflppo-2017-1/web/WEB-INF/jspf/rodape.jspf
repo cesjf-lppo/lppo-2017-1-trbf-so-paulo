@@ -1,4 +1,8 @@
-<%@ page pageEncoding="UTF-8" %>
-<nav>
-    <h2>Membros do grupo Só Paulo: Paulo Toledo!</h2>
-</nav>
+<div class="row">
+    <div class="text-center col-md-6 col-md-offset-0">
+        <h4>Desenvolvido por </h4>
+        <p>&middot;Paulo Toledo &middot;</p>
+    </div>
+</div>
+</body>
+</html>

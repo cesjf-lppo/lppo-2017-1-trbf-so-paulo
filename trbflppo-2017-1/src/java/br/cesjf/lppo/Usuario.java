@@ -11,31 +11,46 @@ public class Usuario implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUsuario;
-    private String nome;
+    private Long id;
+    private String nomeCompleto;
+    private String email;
+    private String senha;
 
     public Usuario() {
+
     }
 
-    public Usuario(Long id, String nome) {
-        this.idUsuario = id;
-        this.nome = nome;
+    public Long getId() {
+        return id;
     }
 
-    public Long getIdUsuario() {
-        return idUsuario;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
+    public String getNomeCompleto() {
+        return nomeCompleto;
     }
 
-    public String getNome() {
-        return nome;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getEmail() {
+        return email;
     }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     
 }

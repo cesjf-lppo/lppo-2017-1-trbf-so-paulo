@@ -13,10 +13,9 @@ Programa de exemplo: TRELLO
         <title>JSP Page</title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/cabecalho.jspf" %>
-        <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h1>Hello World!</h1>
-        <div>TODO write content</div>
-        <%@include file="WEB-INF/jspf/rodape.jspf" %>
+        <%@include file="jspf/menu.jspf" %>
+        <%@include file="jspf/menu.jspf" %>
+        
+        <%@include file="jspf/rodape.jspf" %>
     </body>
 </html>

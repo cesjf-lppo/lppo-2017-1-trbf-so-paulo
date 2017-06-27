@@ -6,54 +6,39 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
 
 @Entity
 public class Tarefa implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTarefa;
-    private Long idUsuario;
-    private Long idStatus;
+    private Long id;
+    private String titulo;
     private String descricao;
-    private Date inicio;
-    private Date fim;
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date concluir;
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date conclusao;
 
     public Tarefa() {
         
     }
 
-    public Tarefa(Long idTarefa, Long idUsuario, Long idStatus, String descricao, Date inicio, Date fim) {
-        this.idTarefa = idTarefa;
-        this.idUsuario = idUsuario;
-        this.idStatus = idStatus;
-        this.descricao = descricao;
-        this.inicio = inicio;
-        this.fim = fim;
+    public Long getId() {
+        return id;
     }
 
-    public Long getIdTarefa() {
-        return idTarefa;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setIdTarefa(Long idTarefa) {
-        this.idTarefa = idTarefa;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public Long getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public Long getIdStatus() {
-        return idStatus;
-    }
-
-    public void setIdStatus(Long idStatus) {
-        this.idStatus = idStatus;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getDescricao() {
@@ -64,21 +49,20 @@ public class Tarefa implements Serializable{
         this.descricao = descricao;
     }
 
-    public Date getInicio() {
-        return inicio;
+    public Date getConcluir() {
+        return concluir;
     }
 
-    public void setInicio(Date inicio) {
-        this.inicio = inicio;
+    public void setConcluir(Date concluir) {
+        this.concluir = concluir;
     }
 
-    public Date getFim() {
-        return fim;
+    public Date getConclusao() {
+        return conclusao;
     }
 
-    public void setFim(Date fim) {
-        this.fim = fim;
+    public void setConclusao(Date conclusao) {
+        this.conclusao = conclusao;
     }
-
-   
+  
 }
