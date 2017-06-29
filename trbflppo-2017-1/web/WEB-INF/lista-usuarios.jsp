@@ -30,10 +30,10 @@
                         </tr>   
                         <c:forEach var="usuario" items="${usuarios}">
                             <tr>
-                                <td><a href="editar.html?id=${usuario.id}">${usuario.id}</a></td>
+                                <td><a href="editaUsuario.html?id=${usuario.id}">${usuario.id}</a></td>
                                 <td>${usuario.nomeCompleto}</td>
                                 <td>${usuario.email}</td>
-                                <td><a href="excluir.html?id=${usuario.id}">Excluir;</a></td>
+                                <td><a href="excluiUsuario.html?id=${usuario.id}">Excluir;</a></td>
                             </tr>
                         </c:forEach>
                     </table>

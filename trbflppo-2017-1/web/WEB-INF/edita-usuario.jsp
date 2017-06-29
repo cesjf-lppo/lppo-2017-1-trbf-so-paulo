@@ -21,8 +21,7 @@
             <div class="panel-body">
                 <center>
                     <form method="post" style="width: 70%; text-align: left">
-                        <label>Id:</label>
-                        <input class="form-control" name="id" value="${usuario.id}" readonly="readonly"/>
+                        <label>Id:  ${usuario.id}</label>
                         <label>Nome Completo:</label>
                         <input class="form-control" name="nome" value="${usuario.nomeCompleto}"/>
                         <label>Email:</label>

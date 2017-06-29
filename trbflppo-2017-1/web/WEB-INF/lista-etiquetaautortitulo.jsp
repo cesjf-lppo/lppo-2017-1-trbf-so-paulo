@@ -31,9 +31,9 @@
                         <c:forEach var="etiqueta" items="${etiquetas}">
                             <tr>
                                 <td>${etiqueta.id}</a></td>
-                                <td>${etiqueta.usuario.id}</td>
-                                <td>${etiqueta.usuario.nomeCompleto}</td>
-                                <td>${etiqueta.tarefa.titulo}</td>
+                                <td>${etiqueta.referenciaAutor.id}</td>
+                                <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
+                                <td>${etiqueta.referenciaTarefa.titulo}</td>
                             </tr>
                         </c:forEach>
                     </table>

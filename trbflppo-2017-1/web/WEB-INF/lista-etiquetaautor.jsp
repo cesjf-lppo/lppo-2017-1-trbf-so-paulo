@@ -26,14 +26,14 @@
                             <th>Nome do autor</th>
                             <select name="Exemplo de Nome">  
                             <c:forEach var="etiqueta" items="${etiquetas}">  
-                                <option value="${etiqueta.usuario.nomeCompleto}">${etiqueta.usuario.nomeCompleto}</option>  
+                                <option value="${etiqueta.referenciaAutor.nomeCompleto}">${etiqueta.referenciaAutor.nomeCompleto}</option>  
                             </c:forEach>  
                             </select><br>
                             <th>Título da etiqueta</th><br>
                         </tr>
                         <c:forEach var="etiqueta" items="${etiquetas}">
                             <tr>
-                                <td>${etiqueta.usuario.nomeCompleto}</td>
+                                <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
                                 <td>${etiqueta.titulo}</td>
                             </tr>
                         </c:forEach>          
