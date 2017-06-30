@@ -34,7 +34,13 @@
                             </c:forEach>  
                         </select><br>
                         <label>Titulo:</label>
-                        <input class="form-control" type="text" name="titulo"/>
+                        <select class="form-control" name="titulo" size="4">
+                            <option value="A Fazer">A Fazer</option>
+                            <option value="Fazendo">Fazendo</option>
+                            <option value="Bloqueado">Bloqueado</option>
+                            <option value="Feito">Feito</option>
+                        </select>
+                        
                         <br>
                         <div class="form-group col-md-3 col-sm-3 pull-right" >
                             <input type="submit" class="btn btn-primary" value="Cadastrar"/>

@@ -40,7 +40,7 @@ public class EtiquetaServlet extends HttpServlet {
        
         if(request.getServletPath().contains("/editaEtiqueta.html")){
             editarGet(request,response);
-        } else if(request.getServletPath().contains("/excluirEtiqueta.html")){
+        } else if(request.getServletPath().contains("/excluiEtiqueta.html")){
             excluirGet(request, response);
             response.sendRedirect("listaEtiquetas.html");
         } else if(request.getServletPath().contains("/listaEtiquetas.html")){
@@ -87,7 +87,7 @@ public class EtiquetaServlet extends HttpServlet {
 
     private void excluirGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
         EtiquetaJpaController dao = new EtiquetaJpaController(ut, emf);
-        Long id = Long.parseLong("id");
+        Long id = Long.parseLong(request.getParameter("id"));
         
         try {
             dao.destroy(id);

@@ -32,11 +32,11 @@
                         </tr>   
                         <c:forEach var="tarefa" items="${tarefas}">
                             <tr>
-                                <td><a href="editarTarefa.html?id=${tarefa.id}">${tarefa.id}</a></td>
+                                <td><a href="editaTarefa.html?id=${tarefa.id}">${tarefa.id}</a></td>
                                 <td>${tarefa.titulo}</td>
                                 <td>${tarefa.descricao}</td>
                                 <td><fmt:formatDate value="${tarefa.concluir}" type="date" dateStyle="default" /></td>
-                                <td><a href="excluirTarefa.html?id=${tarefa.id}">Excluir;</a></td>
+                                <td><a href="excluiTarefa.html?id=${tarefa.id}">Excluir;</a></td>
                             </tr>
                         </c:forEach>
                     </table>

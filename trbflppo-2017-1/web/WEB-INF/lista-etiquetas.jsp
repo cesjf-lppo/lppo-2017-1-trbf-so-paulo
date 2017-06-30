@@ -31,11 +31,11 @@
                         </tr>
                         <c:forEach var="etiqueta" items="${etiquetas}">
                             <tr>
-                                <td><a href="editarEtiquetas.html?id=${etiqueta.id}">${etiqueta.id}</a></td>
+                                <td><a href="editaEtiqueta.html?id=${etiqueta.id}">${etiqueta.id}</a></td>
                                 <td><a href="listaUsuarios.html?id=${etiqueta.referenciaAutor.id}">${etiqueta.referenciaAutor.nomeCompleto}</td>
-                                <td><a href="listarTarefas.html?id=${etiqueta.referenciaTarefa.id}">${etiqueta.referenciaTarefa.titulo}</td>
+                                <td><a href="listaTarefas.html?id=${etiqueta.referenciaTarefa.id}">${etiqueta.referenciaTarefa.titulo}</td>
                                 <td>${etiqueta.titulo}</td>
-                                <td><a href="excluirEtiqueta.html?id=${etiqueta.id}">Excluir;</a></td>
+                                <td><a href="excluiEtiqueta.html?id=${etiqueta.id}">Excluir;</a></td>
                             </tr>
                         </c:forEach>
                     </table>

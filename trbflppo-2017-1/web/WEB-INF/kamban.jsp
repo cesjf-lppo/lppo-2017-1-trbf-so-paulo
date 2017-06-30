@@ -11,9 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Kamban</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/kamban.css" rel="stylesheet">
-        <script src="js/bootstrap.js"></script>
+        
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
