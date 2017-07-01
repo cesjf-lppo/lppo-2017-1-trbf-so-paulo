@@ -18,19 +18,25 @@
         
         <div class="panel panel-primary" style="margin:20px;">
             <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Edição de Etiquetas!</h3>
+                <h3 class="panel-title" style="text-align: center;">Edição de Etiquetas</h3>
             </div> 
             <div class="panel-body">
                 <center>
                     <form method="post" style="width: 70%; text-align: left">
                         <label>Id:</label>
-                        <input class="form-control" name="id" type="hidden" value="${etiqueta.id}" readonly="readonly" />
+                        <input class="form-control" name="id" value="${etiqueta.id}" readonly="readonly" />
                         <label>Referência para um Autor:</label>
-                        <input class="form-control" name="idUsuario" value="${etiqueta.usuario.id}"/>
+                        <input class="form-control" name="idUsuario" value="${etiqueta.referenciaAutor.id}"/>
                         <label>Referência para uma Tarefa:</label>
-                        <input class="form-control" name="idTarefa" value ="${etiqueta.tarefa.id}"/>
+                        <input class="form-control" name="idTarefa" value ="${etiqueta.referenciaTarefa.id}"/>
                         <label>Titulo:</label>
-                        <input class="form-control" name="titulo" value="${etiqueta.titulo}"/>
+                        <input class="form-control" name="titulo" value="${etiqueta.titulo}" readonly="readonly"/>
+                        <select class="form-control" name="titulo" size="4">
+                            <option value="A Fazer">A Fazer</option>
+                            <option value="Fazendo">Fazendo</option>
+                            <option value="Bloqueado">Bloqueado</option>
+                            <option value="Feito">Feito</option>
+                        </select>
                         <br>
                         <div class="form-group col-md-3 col-sm-3 pull-right" >
                             <input type="submit" class="btn btn-primary" value="Cadastrar"/>

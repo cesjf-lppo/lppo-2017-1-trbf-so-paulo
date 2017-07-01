@@ -18,7 +18,7 @@
         
         <div class="panel panel-primary" style="margin:20px;">
             <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Novo usuário!</h3>
+                <h3 class="panel-title" style="text-align: center;">Novo usuário</h3>
             </div> 
             <div class="panel-body">
                 <center>

@@ -1,9 +1,10 @@
 package br.cesjf.lppo.servlet;
 
 import br.cesjf.lppo.Etiqueta;
+import br.cesjf.lppo.Usuario;
 import br.cesjf.lppo.dao.EtiquetaJpaController;
+import br.cesjf.lppo.dao.UsuarioJpaController;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Resource;
@@ -35,7 +36,7 @@ public class KambanServlet extends HttpServlet {
         List<Etiqueta> etiquetas = new ArrayList<>();
         EtiquetaJpaController dao = new EtiquetaJpaController(ut, emf);
         etiquetas = dao.findEtiquetaEntities();
-
+        
         request.setAttribute("etiquetas", etiquetas);
         request.getRequestDispatcher("WEB-INF/kamban.jsp").forward(request, response);
     }

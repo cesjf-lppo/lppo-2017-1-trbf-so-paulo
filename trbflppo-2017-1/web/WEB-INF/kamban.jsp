@@ -24,7 +24,10 @@
         <div id="board">
             <div id="todo" class="section">
                 <h1>A Fazer</h1>
-                <c:forEach var="etiquetas" items="${etiquetas}">
+                
+                MAP<STRING, LIST<ETIQUETA>>
+                
+                        <c:forEach var="etiquetas" items="${etiquetas}">
                     <div id="c2" class="card">${etiquetas.titulo}</div>
                 </c:forEach>
             </div>
