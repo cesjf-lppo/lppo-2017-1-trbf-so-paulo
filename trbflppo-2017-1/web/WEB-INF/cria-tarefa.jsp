@@ -15,23 +15,26 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-
         <div>
             <h3>Nova Tarefa</h3>
             <div>
-                <center>
-                    <form method="post" style="width: 60%; text-align: left">
+                <form method="post">
+                    <p>
                         <label>Titulo:</label>
-                        <input type="text" name="titulo"/>
+                        <input type="text" name="titulo" size="60"/>
+                    </p>
+                    <p>
                         <label>Descrição:</label>
-                        <input type="text" name="descricao"/>
+                        <input type="text" name="descricao" size="56"/>
+                    </p>
+                    <p>
                         <label>Data prevista para conclusão:</label>
-                        <input type="text" name="dataConcluir"/>
-                        <div>
-                            <input type="submit" value="Cadastrar"/>
-                        </div>
-                    </form>
-                </center>
+                        <input type="text" name="dataConcluir" size="36"/>
+                    </p>
+                    <div>
+                        <input type="submit" value="Cadastrar"/>
+                    </div>
+                </form>
             </div>
         </div>
 

@@ -17,20 +17,24 @@
         <div>
             <h3>Novo usuário</h3>
             <div>
-                <center>
-                    <form method="post" style="width: 50%; text-align: left">
+                <form method="post">
+                    <p>
                         <label>Nome Completo:</label>
-                        <input type="text" name="nome"/>
+                        <input type="text" name="nome" size="60"/>
+                    </p>
+                    <p>
                         <label>Email:</label>
-                        <input type="text" name="email"/>
+                        <input type="text" name="email" size="71"/>
+                    </p>
+                    <p>
                         <label>Senha:</label>
-                        <input type="text" name="senha"/>
-                        <div>
-                            <input type="submit" value="Cadastrar"/>
-                        </div>
-                    </form>
-                </center>
+                        <input type="text" name="senha" size="71"/>
+                    </p>
+                    <div>
+                        <input type="submit" value="Cadastrar"/>
+                    </div>
+                </form>
             </div>
-        </div>   
+        </div>
 
         <%@include file="jspf/rodape.jspf" %>

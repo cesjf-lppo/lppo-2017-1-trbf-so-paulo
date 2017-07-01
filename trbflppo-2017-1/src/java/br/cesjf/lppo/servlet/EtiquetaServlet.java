@@ -75,16 +75,25 @@ public class EtiquetaServlet extends HttpServlet {
 
     private void editarGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try{
-            EtiquetaJpaController dao = new EtiquetaJpaController(ut, emf);
             Long id = Long.parseLong(request.getParameter("id"));
+            EtiquetaJpaController dao = new EtiquetaJpaController(ut, emf);
             Etiqueta etiqueta = dao.findEtiqueta(id);
+            List<Etiqueta> etiquetas = dao.findEtiquetaEntities();
+            
             request.setAttribute("etiqueta", etiqueta);
+            request.setAttribute("etiquetas", etiquetas);
+            
+            List<Tarefa> tarefas = new ArrayList<>();
+            TarefaJpaController daoT = new TarefaJpaController(ut, emf);
+            tarefas = daoT.findTarefaEntities();
+
+            request.setAttribute("tarefas", tarefas);
+
             request.getRequestDispatcher("WEB-INF/edita-etiqueta.jsp").forward(request, response);
         }catch(Exception ex){
             response.sendRedirect("listaEtiquetas.html");
         }
     }
-
     private void excluirGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
         EtiquetaJpaController dao = new EtiquetaJpaController(ut, emf);
         Long id = Long.parseLong(request.getParameter("id"));

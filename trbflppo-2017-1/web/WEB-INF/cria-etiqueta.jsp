@@ -6,7 +6,6 @@
 <!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -17,33 +16,31 @@
         <div>
             <h3>Nova Etiqueta</h3>
             <div>
-                <center>
-                    <form method="post" style="width: 50%; text-align: left">
+                <form method="post">
+                    <p>
                         <label>Referência para um Autor:</label>
-                        <select name="idUsuario">  
+                        <select name="idUsuario" style="width: 300px">  
                             <c:forEach var="usuario" items="${usuarios}">  
                                 <option value="${usuario.id}">${usuario.nomeCompleto}</option>  
                             </c:forEach>  
-                        </select><br>
+                        </select>
+                    </p>
+                    <p>
                         <label>Referência para uma Tarefa:</label>
-                        <select name="idTarefa">  
+                        <select name="idTarefa" style="width: 290px">  
                             <c:forEach var="tarefa" items="${tarefas}">  
                                 <option value="${tarefa.id}">${tarefa.titulo}</option>  
                             </c:forEach>  
-                        </select><br>
-                        <label>Titulo da Etiqueta:</label>
-                        <select class="form-control" name="titulo" size="4">
-                            <option value="A Fazer">A Fazer</option>
-                            <option value="Fazendo">Fazendo</option>
-                            <option value="Bloqueado">Bloqueado</option>
-                            <option value="Feito">Feito</option>
                         </select>
-
-                        <div>
-                            <input type="submit" value="Cadastrar"/>
-                        </div>
-                    </form>
-                </center>
+                    </p>
+                    <p>
+                        <label>Titulo da Etiqueta:</label>
+                        <input type="text" name="titulo" size="54">
+                    </p>
+                    <div>
+                        <input type="submit" value="Cadastrar"/>
+                    </div>
+                </form>
             </div>
         </div>
 

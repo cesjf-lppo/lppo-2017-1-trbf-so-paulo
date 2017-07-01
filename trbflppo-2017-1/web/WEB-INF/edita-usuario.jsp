@@ -17,21 +17,27 @@
         <div>
             <h3>Edição de Usuários</h3>
             <div>
-                <center>
-                    <form method="post" style="width: 70%; text-align: left">
+                <form method="post">
+                    <p>                            
                         <label>Id:</label>
-                        <input type="text" name="id" value="${usuario.id}" readonly="readonly" />
+                        <input type="text" name="id" value="${usuario.id}" readonly="readonly" size="76"/>
+                    </p>
+                    <p>                            
                         <label>Nome Completo:</label>
-                        <input type="text" name="nome" value="${usuario.nomeCompleto}"/>
+                        <input type="text" name="nome" value="${usuario.nomeCompleto}" size="60"/>
+                    </p>
+                    <p>                            
                         <label>Email:</label>
-                        <input type="text" name="email" value ="${usuario.email}"/>
+                        <input type="text" name="email" value ="${usuario.email}" size="71"/>
+                    </p>
+                    <p>                            
                         <label>Senha:</label>
-                        <input type="text" name="senha" value="${usuario.senha}"/>
-                        <div>
-                            <input type="submit" value="Cadastrar"/>
-                        </div>
-                    </form>
-                </center>
+                        <input type="text" name="senha" value="${usuario.senha}" size="71"/>
+                    </p>
+                    <div>
+                        <input type="submit" value="Cadastrar"/>
+                    </div>
+                </form>
             </div>
         </div>
         <%@include file="jspf/rodape.jspf" %>

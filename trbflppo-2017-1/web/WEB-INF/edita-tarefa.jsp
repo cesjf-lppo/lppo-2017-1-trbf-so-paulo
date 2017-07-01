@@ -17,23 +17,31 @@
         <div>
             <h3>Edição de Tarefas</h3>
             <div>
-                <center>
-                    <form method="post" style="width: 90%; text-align: left">
+                <form method="post">
+                    <p>                            
                         <label>Id:</label>
-                        <input type="text" name="id" value="${tarefas.id}" readonly="readonly" />
+                        <input type="text" name="id" value="${tarefas.id}" readonly="readonly" size="64"/>
+                    </p>
+                    <p>                            
                         <label>Titulo:</label>
-                        <input type="text" name="titulo" value="${tarefas.titulo}" />
+                        <input type="text" name="titulo" value="${tarefas.titulo}" size="60"/>
+                    </p>
+                    <p>                            
                         <label>Descrição:</label>
-                        <input type="text" name="descricao" value="${tarefas.descricao}" />
+                        <input type="text" name="descricao" value="${tarefas.descricao}" size="56"/>
+                    </p>
+                    <p>                            
                         <label>Data prevista para conclusão:</label>
-                        <input type="text" name="dt-concluir" value="<fmt:formatDate value="${tarefas.concluir}" type="date" dateStyle="default" />" />
+                        <input type="text" name="dt-concluir" value="<fmt:formatDate value="${tarefas.concluir}" type="date" dateStyle="default"/>" size="36"/>
+                    </p>
+                    <p>                            
                         <label>Data da conclusão:</label>
-                        <input type="text" name="dt-concluida" value="<fmt:formatDate value="${tarefas.conclusao}" type="date" dateStyle="default" />"/>
-                        <div>
-                            <input type="submit" value="Cadastrar"/>
-                        </div>
-                    </form>
-                </center>
+                        <input type="text" name="dt-concluida" value="<fmt:formatDate value="${tarefas.conclusao}" type="date" dateStyle="default"/>" size="47"/>
+                    </p>
+                    <div>
+                        <input type="submit" value="Cadastrar"/>
+                    </div>
+                </form>
             </div>
         </div>
 

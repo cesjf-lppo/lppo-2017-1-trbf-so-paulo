@@ -21,19 +21,22 @@
                     <table>
                         <tr>
                             <th>Nome do autor</th>
-                        <select>  
+                        <select name="autor">  
                             <c:forEach var="etiqueta" items="${etiquetas}">  
-                                <option value="${etiqueta.referenciaAutor.nomeCompleto}">${etiqueta.referenciaAutor.nomeCompleto}</option>  
+                                <option value="${etiqueta.referenciaAutor.id}">${etiqueta.referenciaAutor.nomeCompleto}</option>  
                             </c:forEach>  
                         </select><br>
                         <th>Título da etiqueta</th><br>
                         </tr>
                         <c:forEach var="etiqueta" items="${etiquetas}">
+                            <c:if test="${etiqueta.referenciaAutor.id}" == "autor">
                             <tr>
                                 <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
                                 <td>${etiqueta.titulo}</td>
                             </tr>
-                        </c:forEach>          
+                            </c:if>
+                        </c:forEach>   
+                            
                     </table>
                 </div>
             </div>

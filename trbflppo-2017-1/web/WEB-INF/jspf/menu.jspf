@@ -5,37 +5,45 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid"> 
-                <div class="navbar-header">
-                    <span class="panel-title">Trabalho Final LPPO</span>
-                    <div class="collapse navbar-collapse" id="defaultNavbar1">
-                        <ul class="nav navbar-nav">
-                            <li></li>
-                        </ul>
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuários<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
+        <div> 
+            <div>
+                <h1>Trabalho Final LPPO</h1>
+                <div>
+                    <table width="100%">
+                        <tr bgcolor="#c0c0c0">
+                            <th>Usuários</th>
+                            <th>Tarefas</th>
+                            <th>Etiquetas</th>
+                            <th>Kanban</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
                                     <li><a href="criaUsuario.html">Novo Usuário</a></li>
                                     <li><a href="listaUsuarios.html">Listagem de Usuários</a></li>
                                 </ul>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tarefas<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
+                            </td>
+                            <td>
+                                <ul>
                                     <li><a href="criaTarefa.html">Nova Tarefa</a></li>
                                     <li><a href="listaTarefas.html">Listagem de Tarefas</a></li>
                                 </ul>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Etiquetas<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
+                            </td>
+                            <td>
+                                <ul>
                                     <li><a href="criaEtiqueta.html">Nova Etiqueta</a></li>
                                     <li><a href="listaEtiquetas.html">Listagem de Etiquetas</a></li>
                                     <li><a href="listaEtiquetasAutor.html">Listagem de Etiquetas por Autor</a></li>
                                     <li><a href="listaEtiquetasAutorTitulo.html">Listagem de Etiquetas por Autor e Titulo</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="kamban.html">Kamban</a></li>
-                        </ul>
-                    </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="kamban.html">Kamban</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-        </nav>
+            </div>
+        </div>

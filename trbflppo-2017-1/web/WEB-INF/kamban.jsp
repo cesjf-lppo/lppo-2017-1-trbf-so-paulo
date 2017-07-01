@@ -19,30 +19,36 @@
             <h3>KANBAN</h3>
             MAP<STRING, LIST<ETIQUETA>>
             <div>
-                <div>
-                    <h1>A Fazer</h1>
-                    <c:forEach var="etiquetas" items="${etiquetas}">
-                        <div>${etiquetas.titulo}</div>
-                    </c:forEach>
-                </div>
-                <div>
-                    <h1>Fazendo</h1>
-                    <c:forEach var="etiquetas" items="${etiquetas}">
-                        <div>${etiquetas.titulo}</div>
-                    </c:forEach>
-                </div>
-                <div>
-                    <h1>Bloqueado</h1>
-                    <c:forEach var="etiquetas" items="${etiquetas}">
-                        <div>${etiquetas.titulo}</div>
-                    </c:forEach>
-                </div>
-                <div>
-                    <h1>Feito</h1>
-                    <c:forEach var="etiquetas" items="${etiquetas}">
-                        <div>${etiquetas.titulo}</div>
-                    </c:forEach>
-                </div>
-            </div>  
+                <table width="100%">
+                    <tr bgcolor="#c0c0c0">
+                        <th><h3>A Fazer</h3></th>
+                        <th><h3>Fazendo</h3></th>
+                        <th><h3>Bloqueado</h3></th>
+                        <th><h3>Feito</h3></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <c:forEach var="etiquetas" items="${etiquetas}">
+                                <div>${etiquetas.titulo}</div>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <c:forEach var="etiquetas" items="${etiquetas}">
+                                <div>${etiquetas.titulo}</div>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <c:forEach var="etiquetas" items="${etiquetas}">
+                                <div>${etiquetas.titulo}</div>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <c:forEach var="etiquetas" items="${etiquetas}">
+                                <div>${etiquetas.titulo}</div>
+                            </c:forEach>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     <%@include file="jspf/rodape.jspf" %>
