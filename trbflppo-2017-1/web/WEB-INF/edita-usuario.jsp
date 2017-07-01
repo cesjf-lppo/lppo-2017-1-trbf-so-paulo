@@ -14,23 +14,21 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Edição de Usuários!</h3>
-            </div> 
-            <div class="panel-body">
+        <div>
+            <h3>Edição de Usuários</h3>
+            <div>
                 <center>
                     <form method="post" style="width: 70%; text-align: left">
-                        <label>Id:  ${usuario.id}</label>
+                        <label>Id:</label>
+                        <input type="text" name="id" value="${usuario.id}" readonly="readonly" />
                         <label>Nome Completo:</label>
-                        <input class="form-control" name="nome" value="${usuario.nomeCompleto}"/>
+                        <input type="text" name="nome" value="${usuario.nomeCompleto}"/>
                         <label>Email:</label>
-                        <input class="form-control" name="email" value ="${usuario.email}"/>
+                        <input type="text" name="email" value ="${usuario.email}"/>
                         <label>Senha:</label>
-                        <input class="form-control" name="senha" value="${usuario.senha}"/>
-                        <br>
-                        <div class="form-group col-md-3 col-sm-3 pull-right" >
-                            <input type="submit" class="btn btn-primary" value="Cadastrar"/>
+                        <input type="text" name="senha" value="${usuario.senha}"/>
+                        <div>
+                            <input type="submit" value="Cadastrar"/>
                         </div>
                     </form>
                 </center>

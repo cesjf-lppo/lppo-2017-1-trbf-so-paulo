@@ -14,22 +14,19 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Listagem de Etiquetas por Autor</h3>
-            </div> 
-            <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table table-striped">
+        <div>
+            <h3>Listagem de Etiquetas por Autor</h3>
+            <div>
+                <div>
+                    <table>
                         <tr>
                             <th>Nome do autor</th>
-                            <select name="Exemplo de Nome">  
+                        <select>  
                             <c:forEach var="etiqueta" items="${etiquetas}">  
                                 <option value="${etiqueta.referenciaAutor.nomeCompleto}">${etiqueta.referenciaAutor.nomeCompleto}</option>  
                             </c:forEach>  
-                            </select><br>
-                            <th>Título da etiqueta</th><br>
+                        </select><br>
+                        <th>Título da etiqueta</th><br>
                         </tr>
                         <c:forEach var="etiqueta" items="${etiquetas}">
                             <tr>
@@ -39,7 +36,6 @@
                         </c:forEach>          
                     </table>
                 </div>
-                <br>
             </div>
         </div>
 

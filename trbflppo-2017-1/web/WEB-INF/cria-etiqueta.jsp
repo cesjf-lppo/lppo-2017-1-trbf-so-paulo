@@ -14,13 +14,11 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>        
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Nova Etiqueta</h3>
-            </div> 
-            <div class="panel-body">
+        <div>
+            <h3>Nova Etiqueta</h3>
+            <div>
                 <center>
-                    <form method="post" style="width: 70%; text-align: left">
+                    <form method="post" style="width: 50%; text-align: left">
                         <label>Referência para um Autor:</label>
                         <select name="idUsuario">  
                             <c:forEach var="usuario" items="${usuarios}">  
@@ -33,17 +31,16 @@
                                 <option value="${tarefa.id}">${tarefa.titulo}</option>  
                             </c:forEach>  
                         </select><br>
-                        <label>Titulo:</label>
+                        <label>Titulo da Etiqueta:</label>
                         <select class="form-control" name="titulo" size="4">
                             <option value="A Fazer">A Fazer</option>
                             <option value="Fazendo">Fazendo</option>
                             <option value="Bloqueado">Bloqueado</option>
                             <option value="Feito">Feito</option>
                         </select>
-                        
-                        <br>
-                        <div class="form-group col-md-3 col-sm-3 pull-right" >
-                            <input type="submit" class="btn btn-primary" value="Cadastrar"/>
+
+                        <div>
+                            <input type="submit" value="Cadastrar"/>
                         </div>
                     </form>
                 </center>

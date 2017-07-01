@@ -15,19 +15,16 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Listagem de Tarefas</h3>
-            </div> 
-            <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table table-striped">
+        <div>
+            <h3>Listagem de Tarefas</h3>
+            <div>
+                <div>
+                    <table>
                         <tr>
                             <th>Id</th>
-                            <th>Titulo da tarefa</th><br>
-                            <th>Descrição da tarefa</th><br>
-                            <th>Data Prevista para conclusão</th><br>
+                            <th>Titulo da tarefa</th>
+                            <th>Descrição da tarefa</th>
+                            <th>Data Prevista para conclusão</th>
                             <th>Ações</th>
                         </tr>   
                         <c:forEach var="tarefa" items="${tarefas}">
@@ -41,8 +38,7 @@
                         </c:forEach>
                     </table>
                 </div>
-                <br>
             </div>
         </div>
+    <%@include file="jspf/rodape.jspf" %>
 
-        <%@include file="jspf/rodape.jspf" %>

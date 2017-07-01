@@ -14,23 +14,20 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Listagem de Etiquetas por Autor e Título</h3>
-            </div> 
-            <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table table-striped">
+        <div>
+            <h3>Listagem de Etiquetas por Autor e Título</h3>
+            <div>
+                <div>
+                    <table>
                         <tr>
                             <th>Id</th>
-                            <th>Id Autor</th><br>
-                            <th>Nome Autor</th><br>
-                            <th>Titulo tarefa</th><br>
+                            <th>Id Autor</th>
+                            <th>Nome Autor</th>
+                            <th>Titulo tarefa</th>
                         </tr>
                         <c:forEach var="etiqueta" items="${etiquetas}">
                             <tr>
-                                <td>${etiqueta.id}</a></td>
+                                <td>${etiqueta.id}</td>
                                 <td>${etiqueta.referenciaAutor.id}</td>
                                 <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
                                 <td>${etiqueta.referenciaTarefa.titulo}</td>
@@ -38,7 +35,6 @@
                         </c:forEach>
                     </table>
                 </div>
-                <br>
             </div>
         </div>
 

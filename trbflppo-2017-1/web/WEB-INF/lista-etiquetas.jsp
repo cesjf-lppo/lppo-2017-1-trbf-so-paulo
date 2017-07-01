@@ -14,19 +14,16 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Listagem de Etiquetas</h3>
-            </div> 
-            <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table table-striped">
+        <div>
+            <h3>Listagem de Etiquetas</h3>
+            <div>
+                <div>
+                    <table>
                         <tr>
                             <th>Id</th>
-                            <th>Autor</th><br>
-                            <th>Tarefa</th><br>
-                            <th>Título</th><br>
+                            <th>Autor</th>
+                            <th>Tarefa</th>
+                            <th>Título</th>
                             <th>Ações</th>
                         </tr>
                         <c:forEach var="etiqueta" items="${etiquetas}">
@@ -40,7 +37,6 @@
                         </c:forEach>
                     </table>
                 </div>
-                <br>
             </div>
         </div>
 

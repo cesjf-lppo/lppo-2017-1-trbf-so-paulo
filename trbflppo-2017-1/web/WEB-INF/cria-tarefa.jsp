@@ -16,22 +16,19 @@
     <body>
         <%@include file="jspf/menu.jspf" %>
 
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Nova Tarefa</h3>
-            </div> 
-            <div class="panel-body">
+        <div>
+            <h3>Nova Tarefa</h3>
+            <div>
                 <center>
-                    <form method="post" style="width: 70%; text-align: left">
+                    <form method="post" style="width: 60%; text-align: left">
                         <label>Titulo:</label>
-                        <input class="form-control" type="text" name="titulo"/>
+                        <input type="text" name="titulo"/>
                         <label>Descrição:</label>
-                        <input class="form-control" type="text" name="descricao"/>
+                        <input type="text" name="descricao"/>
                         <label>Data prevista para conclusão:</label>
-                        <input class="form-control" type="text" name="dataConcluir"/>
-                        <br>
-                        <div class="form-group col-md-3 col-sm-3 pull-right" >
-                            <input type="submit" class="btn btn-primary" value="Cadastrar"/>
+                        <input type="text" name="dataConcluir"/>
+                        <div>
+                            <input type="submit" value="Cadastrar"/>
                         </div>
                     </form>
                 </center>

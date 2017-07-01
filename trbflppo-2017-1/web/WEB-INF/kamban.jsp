@@ -11,45 +11,38 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Kamban</title>
-        
+
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-        
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Kamban</h3>
-            </div> 
-            <div class="panel-body">
-        <div id="board">
-            <div id="todo" class="section">
-                <h1>A Fazer</h1>
-                
-                MAP<STRING, LIST<ETIQUETA>>
-                
-                        <c:forEach var="etiquetas" items="${etiquetas}">
-                    <div id="c2" class="card">${etiquetas.titulo}</div>
-                </c:forEach>
-            </div>
-            <div id="doing" class="section">
-                <h1>Fazendo</h1>
-                <c:forEach var="etiquetas" items="${etiquetas}">
-                    <div id="c2" class="card">${etiquetas.titulo}</div>
-                </c:forEach>
-            </div>
-            <div id="done" class="section">
-                <h1>Bloqueado</h1>
-                <c:forEach var="etiquetas" items="${etiquetas}">
-                    <div id="c2" class="card">${etiquetas.titulo}</div>
-                </c:forEach>
-            </div>
-            <div id="doing" class="section">
-                <h1>Feito</h1>
-                <c:forEach var="etiquetas" items="${etiquetas}">
-                    <div id="c2" class="card">${etiquetas.titulo}</div>
-                </c:forEach>
-            </div>
-        </div>  
-            </div>
+        <div>
+            <h3>KANBAN</h3>
+            MAP<STRING, LIST<ETIQUETA>>
+            <div>
+                <div>
+                    <h1>A Fazer</h1>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
+                <div>
+                    <h1>Fazendo</h1>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
+                <div>
+                    <h1>Bloqueado</h1>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
+                <div>
+                    <h1>Feito</h1>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
+            </div>  
         </div>
-        <%@include file="jspf/rodape.jspf" %>
+    <%@include file="jspf/rodape.jspf" %>

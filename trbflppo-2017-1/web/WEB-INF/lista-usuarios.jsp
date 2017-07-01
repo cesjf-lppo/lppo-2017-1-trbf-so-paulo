@@ -14,14 +14,11 @@
     </head>
     <body>
         <%@include file="jspf/menu.jspf" %>
-
-        <div class="panel panel-primary" style="margin:20px;">
-            <div class="panel-heading">
-                <h3 class="panel-title" style="text-align: center;">Listatagem de Usuários</h3>
-            </div> 
-            <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table table-striped">
+        <div>
+            <h3>Listatagem de Usuários</h3>
+            <div>
+                <div>
+                    <table>
                         <tr>
                             <th>Id</th>
                             <th>Nome</th>
@@ -38,8 +35,7 @@
                         </c:forEach>
                     </table>
                 </div>
-                <br>
             </div>
         </div>
 
-        <%@include file="jspf/rodape.jspf" %>
+    <%@include file="jspf/rodape.jspf" %>
