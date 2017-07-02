@@ -24,15 +24,15 @@
                             <th>Autor</th>
                             <th>Tarefa</th>
                             <th>Título</th>
-                            <th>Ações</th>
+                            <th>Excluir</th>
                         </tr>
                         <c:forEach var="etiqueta" items="${etiquetas}">
                             <tr>
                                 <td><a href="editaEtiqueta.html?id=${etiqueta.id}">${etiqueta.id}</a></td>
-                                <td><a href="listaUsuarios.html?id=${etiqueta.referenciaAutor.id}">${etiqueta.referenciaAutor.nomeCompleto}</td>
-                                <td><a href="listaTarefas.html?id=${etiqueta.referenciaTarefa.id}">${etiqueta.referenciaTarefa.titulo}</td>
+                                <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
+                                <td><${etiqueta.referenciaTarefa.titulo}</td>
                                 <td>${etiqueta.titulo}</td>
-                                <td><a href="excluiEtiqueta.html?id=${etiqueta.id}">Excluir;</a></td>
+                                <td><a href="excluiEtiqueta.html?id=${etiqueta.id}">X</a></td>
                             </tr>
                         </c:forEach>
                     </table>

@@ -25,7 +25,7 @@
                             <th>Titulo da tarefa</th>
                             <th>Descrição da tarefa</th>
                             <th>Data Prevista para conclusão</th>
-                            <th>Ações</th>
+                            <th>Excluir</th>
                         </tr>   
                         <c:forEach var="tarefa" items="${tarefas}">
                             <tr>
@@ -33,7 +33,7 @@
                                 <td>${tarefa.titulo}</td>
                                 <td>${tarefa.descricao}</td>
                                 <td><fmt:formatDate value="${tarefa.concluir}" type="date" dateStyle="default" /></td>
-                                <td><a href="excluiTarefa.html?id=${tarefa.id}">Excluir;</a></td>
+                                <td><a href="excluiTarefa.html?id=${tarefa.id}">X</a></td>
                             </tr>
                         </c:forEach>
                     </table>

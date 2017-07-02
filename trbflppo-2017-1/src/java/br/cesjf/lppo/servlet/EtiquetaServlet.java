@@ -70,6 +70,13 @@ public class EtiquetaServlet extends HttpServlet {
                 Logger.getLogger(EtiquetaServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        if(request.getServletPath().contains("/listaEtiquetasAutor.html")){
+            listaEtiquetasAutorPost(request, response);
+        }
+        if(request.getServletPath().contains("/listaEtiquetasAutorTitulo.html")){
+            listarEtiquetaAutorTituloPost(request, response);
+        }
 
     }
 
@@ -134,7 +141,13 @@ public class EtiquetaServlet extends HttpServlet {
         EtiquetaJpaController dao = new EtiquetaJpaController(ut, emf);
         etiquetas = dao.findEtiquetaEntities();
         
+        List<Usuario> usuarios = new ArrayList<>();
+        UsuarioJpaController daoU = new UsuarioJpaController(ut, emf);
+        usuarios = daoU.findUsuarioEntities();
+
         request.setAttribute("etiquetas", etiquetas);
+        request.setAttribute("usuarios", usuarios);
+        
         request.getRequestDispatcher("WEB-INF/lista-etiquetaautor.jsp").forward(request, response);
     }
 
@@ -142,8 +155,13 @@ public class EtiquetaServlet extends HttpServlet {
         List<Etiqueta> etiquetas = new ArrayList<>();
         EtiquetaJpaController dao = new EtiquetaJpaController(ut, emf);
         etiquetas = dao.findEtiquetaEntities();
-        
         request.setAttribute("etiquetas", etiquetas);
+        
+        List<Usuario> usuarios = new ArrayList<>();
+        UsuarioJpaController daoU = new UsuarioJpaController(ut, emf);
+        usuarios = daoU.findUsuarioEntities();
+        request.setAttribute("usuarios", usuarios);
+        
         request.getRequestDispatcher("WEB-INF/lista-etiquetaautortitulo.jsp").forward(request, response);
     }
 
@@ -185,5 +203,39 @@ public class EtiquetaServlet extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(UsuarioServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    private void listaEtiquetasAutorPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Long id = Long.parseLong(request.getParameter("id"));
+        
+        List<Etiqueta> etiquetaAutor = new ArrayList<>();
+        EtiquetaJpaController daoE = new EtiquetaJpaController(ut, emf);
+        etiquetaAutor = daoE.getEtiquetaByAutor(id);
+        
+        List<Usuario> usuarios = new ArrayList<>();
+        UsuarioJpaController daoU = new UsuarioJpaController(ut, emf);
+        usuarios = daoU.findUsuarioEntities();
+        
+        request.setAttribute("usuarios", usuarios);
+        request.setAttribute("etiquetaAutor", etiquetaAutor);
+
+        response.sendRedirect("listaEtiquetasAutor.html");
+    }
+
+    private void listarEtiquetaAutorTituloPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Long idUsuario = Long.parseLong(request.getParameter("idUsuario"));
+        String tituloEtiqueta = request.getParameter("tituloEtiqueta");
+        
+        List<Etiqueta> etiquetasAutorTitulo = new ArrayList<>();
+        EtiquetaJpaController daoE = new EtiquetaJpaController(ut, emf);
+        etiquetasAutorTitulo = daoE.getEtiquetaByAutorTitulo(idUsuario, tituloEtiqueta);
+        request.setAttribute("etiquetasAutorTitulo", etiquetasAutorTitulo);
+        
+        List<Usuario> usuarios = new ArrayList<>();
+        UsuarioJpaController daoU = new UsuarioJpaController(ut, emf);
+        usuarios = daoU.findUsuarioEntities();
+        request.setAttribute("usuarios", usuarios);
+        
+        response.sendRedirect("listaEtiquetasAutorTitulo.html");
     }
 }

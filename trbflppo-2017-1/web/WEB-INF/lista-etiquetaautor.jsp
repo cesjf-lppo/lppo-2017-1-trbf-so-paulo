@@ -18,28 +18,26 @@
             <h3>Listagem de Etiquetas por Autor</h3>
             <div>
                 <div>
-                    <table>
-                        <tr>
-                            <th>Nome do autor</th>
-                        <select name="autor">  
-                            <c:forEach var="etiqueta" items="${etiquetas}">  
-                                <option value="${etiqueta.referenciaAutor.id}">${etiqueta.referenciaAutor.nomeCompleto}</option>  
-                            </c:forEach>  
-                        </select><br>
-                        <th>Título da etiqueta</th><br>
-                        </tr>
-                        <c:forEach var="etiqueta" items="${etiquetas}">
-                            <c:if test="${etiqueta.referenciaAutor.id}" == "autor">
+                    <form method="POST">
+                        <table>
                             <tr>
-                                <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
-                                <td>${etiqueta.titulo}</td>
+                                <th>Nome do autor</th>
+                                    <select name="id" style="width: 300px">  
+                                        <c:forEach var="usuario" items="${usuarios}">  
+                                            <option value="${usuario.id}">${usuario.nomeCompleto}</option>  
+                                        </c:forEach>  
+                                    </select><br>
+                            <th>Título da etiqueta</th><br>
                             </tr>
-                            </c:if>
-                        </c:forEach>   
-                            
-                    </table>
+                            <c:forEach var="etiqueta" items="${etiquetaAutor}">
+                                <tr>
+                                    <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
+                                    <td>${etiqueta.titulo}</td>
+                                </tr>
+                            </c:forEach>   
+                        </table>
+                    </form>
                 </div>
             </div>
         </div>
-
         <%@include file="jspf/rodape.jspf" %>

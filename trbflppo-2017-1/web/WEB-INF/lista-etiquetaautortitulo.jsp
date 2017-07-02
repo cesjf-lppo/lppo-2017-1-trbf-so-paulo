@@ -18,22 +18,42 @@
             <h3>Listagem de Etiquetas por Autor e Título</h3>
             <div>
                 <div>
-                    <table>
-                        <tr>
-                            <th>Id</th>
-                            <th>Id Autor</th>
-                            <th>Nome Autor</th>
-                            <th>Titulo tarefa</th>
-                        </tr>
-                        <c:forEach var="etiqueta" items="${etiquetas}">
+                    <form method="POST">
+                        <table>
                             <tr>
-                                <td>${etiqueta.id}</td>
-                                <td>${etiqueta.referenciaAutor.id}</td>
-                                <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
-                                <td>${etiqueta.referenciaTarefa.titulo}</td>
+                            <p>
+                                <label>Nome do Autor : </label>
+                                <select name="id" style="width: 313px">  
+                                    <c:forEach var="usuario" items="${usuarios}">  
+                                        <option value="${usuario.id}">${usuario.nomeCompleto}</option>  
+                                    </c:forEach>  
+                                </select>
+                            </p>
+                            <p>
+                                <label>Titulo da Etiqueta : </label>
+                                <select name="titulo" style="width: 300px">  
+                                    <c:forEach var="etiqueta" items="${etiquetas}">  
+                                        <option value="${etiqueta.id}">${etiqueta.titulo}</option>  
+                                    </c:forEach>  
+                                </select>
+                            </p>
+                                <th>Id Etiqueta</th>
+                                <th>Id Autor</th>
+                                <th>Nome Autor</th>
+                                <th>Titulo Etiqueta</th>
+                                <th>Titulo Tarefa</th>
                             </tr>
-                        </c:forEach>
-                    </table>
+                            <c:forEach var="etiqueta" items="${etiquetasAutorTitulo}">
+                                <tr>
+                                    <td>${etiqueta.id}</td>
+                                    <td>${etiqueta.referenciaAutor.id}</td>
+                                    <td>${etiqueta.referenciaAutor.nomeCompleto}</td>
+                                    <td>${etiqueta.titulo}</td>
+                                    <td>${etiqueta.referenciaTarefa.titulo}</td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+                    </form>
                 </div>
             </div>
         </div>

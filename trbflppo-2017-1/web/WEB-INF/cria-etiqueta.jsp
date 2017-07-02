@@ -4,6 +4,7 @@
     Author     : Paulo
 --%>
 <!DOCTYPE html>
+<%@page errorPage="jspf/erro.jsp" %>        
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
