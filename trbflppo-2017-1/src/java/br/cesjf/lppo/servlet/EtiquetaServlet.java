@@ -4,6 +4,7 @@ import br.cesjf.lppo.Etiqueta;
 import br.cesjf.lppo.Tarefa;
 import br.cesjf.lppo.Usuario;
 import br.cesjf.lppo.dao.EtiquetaJpaController;
+import br.cesjf.lppo.dao.KanbanDao;
 import br.cesjf.lppo.dao.TarefaJpaController;
 import br.cesjf.lppo.dao.UsuarioJpaController;
 import java.io.IOException;
@@ -72,7 +73,11 @@ public class EtiquetaServlet extends HttpServlet {
         }
         
         if(request.getServletPath().contains("/listaEtiquetasAutor.html")){
-            listaEtiquetasAutorPost(request, response);
+            try {
+                listaEtiquetasAutorPost(request, response);
+            } catch (Exception ex) {
+                Logger.getLogger(EtiquetaServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if(request.getServletPath().contains("/listaEtiquetasAutorTitulo.html")){
             listarEtiquetaAutorTituloPost(request, response);
@@ -205,12 +210,14 @@ public class EtiquetaServlet extends HttpServlet {
         }
     }
 
-    private void listaEtiquetasAutorPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void listaEtiquetasAutorPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         Long id = Long.parseLong(request.getParameter("id"));
         
         List<Etiqueta> etiquetaAutor = new ArrayList<>();
-        EtiquetaJpaController daoE = new EtiquetaJpaController(ut, emf);
-        etiquetaAutor = daoE.getEtiquetaByAutor(id);
+        //EtiquetaJpaController daoE = new EtiquetaJpaController(ut, emf);
+        //etiquetaAutor = daoE.getEtiquetaByAutor(id);
+        KanbanDao daoE = new KanbanDao();
+        etiquetaAutor = daoE.buscarPorIdUsuario(id);
         
         List<Usuario> usuarios = new ArrayList<>();
         UsuarioJpaController daoU = new UsuarioJpaController(ut, emf);

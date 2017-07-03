@@ -1,49 +1,61 @@
-<html lang="pt">
+<style type="text/css">
+    .container-menu{
+            font-family: Arial;
+            font-size: 14px;
+            width: 25%;
+            height: 150px;
+            float: left;
+            background-color: #f0f0f0;
+           
+    }
+
+</style>
+<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<html>
     <head>
         <meta charset="utf-8">
         <title>Trabalho Final LPPO</title>
-
     </head>
     <body>
         <div> 
             <div>
                 <h1>Trabalho Final LPPO</h1>
                 <div>
-                    <table width="100%">
-                        <tr bgcolor="#c0c0c0">
-                            <th>Usu·rios</th>
-                            <th>Tarefas</th>
-                            <th>Etiquetas</th>
-                            <th>Kanban</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li><a href="criaUsuario.html">Novo Usu·rio</a></li>
-                                    <li><a href="listaUsuarios.html">Listagem de Usu·rios</a></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li><a href="criaTarefa.html">Nova Tarefa</a></li>
-                                    <li><a href="listaTarefas.html">Listagem de Tarefas</a></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li><a href="criaEtiqueta.html">Nova Etiqueta</a></li>
-                                    <li><a href="listaEtiquetas.html">Listagem de Etiquetas</a></li>
-                                    <li><a href="listaEtiquetasAutor.html">Listagem de Etiquetas por Autor</a></li>
-                                    <li><a href="listaEtiquetasAutorTitulo.html">Listagem de Etiquetas por Autor e Titulo</a></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li><a href="kamban.html">Kamban</a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="container-menu">
+                        <h3 style="text-align: center;">Usu√°rios</h3>
+                        <ul>
+                            <li><a href="criaUsuario.html">Novo Usu√°rio</a></li>
+                            <li><a href="listaUsuarios.html">Listagem de Usu√°rios</a></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="container-menu">
+                        <h3 style="text-align: center;">Tarefas</h3>
+                        <ul>
+                            <li><a href="criaTarefa.html">Nova Tarefa</a></li>
+                            <li><a href="listaTarefas.html">Listagem de Tarefas</a></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="container-menu">
+                        <h3 style="text-align: center;">Etiquetas</h3>
+                        <ul>
+                            <li><a href="criaEtiqueta.html">Nova Etiqueta</a></li>
+                            <li><a href="listaEtiquetas.html">Listagem de Etiquetas</a></li>
+                            <li><a href="listaEtiquetasAutor.html">Listagem de Etiquetas por Autor</a></li>
+                            <li><a href="listaEtiquetasAutorTitulo.html">Listagem de Etiquetas por Autor e Titulo</a></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="container-menu">
+                        <h3 style="text-align: center;">Kanban</h3>
+                        <ul>
+                            <li><a href="kamban.html">Kamban</a></li>
+                        </ul>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+</html>

@@ -164,7 +164,7 @@ public class EtiquetaJpaController implements Serializable {
 
         try {
 
-            TypedQuery<Etiqueta> q = em.createQuery("SELECT * FROM etiqueta WHERE etiqueta.referenciaautor_id =" + id, Etiqueta.class);
+            TypedQuery<Etiqueta> q = em.createQuery("SELECT * FROM etiqueta WHERE referenciaautor =" + id, Etiqueta.class);
             q.setParameter("Long", id);
             System.out.println(q.getResultList());
 

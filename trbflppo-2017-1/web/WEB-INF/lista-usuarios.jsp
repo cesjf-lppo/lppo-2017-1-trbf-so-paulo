@@ -23,7 +23,7 @@
                             <th>Id</th>
                             <th>Nome</th>
                             <th>Email</th>
-                            <th>Ações</th>
+                            <th>Exluir</th>
                         </tr>   
                         <c:forEach var="usuario" items="${usuarios}">
                             <tr>

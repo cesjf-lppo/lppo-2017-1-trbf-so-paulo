@@ -4,6 +4,21 @@
     Author     : Paulo
 --%>
 
+<style type="text/css">
+    .container-kanban{
+            font-family: Arial;
+            font-size: 14px;
+            width: 25%;
+            height: 150px;
+            float: left;
+            background-color: #8B008B;
+            color: white;
+            
+           
+    }
+
+</style>
+
 <!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,38 +32,32 @@
         <%@include file="jspf/menu.jspf" %>
         <div>
             <h3>KANBAN</h3>
-            MAP<STRING, LIST<ETIQUETA>>
+            <!--MAP<STRING, LIST<ETIQUETA>>-->
             <div>
-                <table width="100%">
-                    <tr bgcolor="#c0c0c0">
-                        <th><h3>A Fazer</h3></th>
-                        <th><h3>Fazendo</h3></th>
-                        <th><h3>Bloqueado</h3></th>
-                        <th><h3>Feito</h3></th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <c:forEach var="etiquetas" items="${etiquetas}">
-                                <div>${etiquetas.titulo}</div>
-                            </c:forEach>
-                        </td>
-                        <td>
-                            <c:forEach var="etiquetas" items="${etiquetas}">
-                                <div>${etiquetas.titulo}</div>
-                            </c:forEach>
-                        </td>
-                        <td>
-                            <c:forEach var="etiquetas" items="${etiquetas}">
-                                <div>${etiquetas.titulo}</div>
-                            </c:forEach>
-                        </td>
-                        <td>
-                            <c:forEach var="etiquetas" items="${etiquetas}">
-                                <div>${etiquetas.titulo}</div>
-                            </c:forEach>
-                        </td>
-                    </tr>
-                </table>
+                <div class="container-kanban">
+                    <h3>A Fazer</h3>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
+                <div class="container-kanban">
+                    <h3>Fazendo</h3>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
+                <div class="container-kanban">
+                    <h3>Bloqueado</h3>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
+                <div class="container-kanban">
+                    <h3>Feito</h3>
+                    <c:forEach var="etiquetas" items="${etiquetas}">
+                        <div>${etiquetas.titulo}</div>
+                    </c:forEach>
+                </div>
             </div>
         </div>
     <%@include file="jspf/rodape.jspf" %>
